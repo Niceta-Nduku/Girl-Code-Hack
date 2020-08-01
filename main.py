@@ -58,5 +58,9 @@ def shadowing():
 def grad():
     return render_template('grad.html')
 
+@app.route('/network')
+def network():
+    return render_template('network.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
