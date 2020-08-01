@@ -1,28 +1,20 @@
 from flask import abort, render_template, redirect
-from flask_login import current_user, login_required
+from flask_login import login_required
 
 from . import home
-from ..models import Student, Professional, Organisation
-from forms import StudentRegistrationForm
+from ..models import Student, Professional, organisation
+from .forms import StudentRegistrationForm
 
 @home.route ('/')
 def homepage():
     """
     Render the homepage template on the / route
     """
-    return "render_template('home/index.html', title="Welcome")"
-
-@home.route('/login',methods=['GET', 'POST'])
-def login():
-    # return redirect('')
-    return ''
+    return render_template('home.html')
 
 @home.route('/register')
 def register():
-    # upon clicking register 
-    #be reditented to the specific sign up page
-    # return redirect('')
-    return 'sign up'
+    return render_template('signup.html')
 
 @home.route('/register/student', methods=['GET', 'POST'])
 def student_register():
@@ -30,22 +22,22 @@ def student_register():
     if form.validate_on_submit():
         student = Student()
 
-        db.session.add(employee)
+        db.session.add(student)
         db.session.commit()
 
         #login
-        return redirect(student/dashboard)
+        return redirect('student/dashboard')
 
      # load student registration template
-    return render_template('auth/register.html', form=form, title='Student Registration')
+    return render_template('student.html', form=form, title='Student Registration')
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():
-    return redirect('professional/dashboard')
+    return 'redirect(\'professional/dashboard\')'
 
 @home.route('/register/institution', methods=['GET', 'POST'])
 def institution_register():
-    return redirect('institution/dashboard')
+    return 'redirect(\'institution/dashboard\')'
 
 @home.route('student/dashboard')
 @login_required

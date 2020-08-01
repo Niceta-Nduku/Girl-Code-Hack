@@ -45,6 +45,11 @@ class Student(UserMixin,db.Model):
     def __repr__(self):
         return '<Student: {}>'.format(self.username)
 
+@login_manager.user_loader
+def load_user(user_id):
+    return Student.query.get(int(user_id))
+
+
 class Professional(UserMixin,db.Model):
 
     __tablename__ = 'professionals'
@@ -147,6 +152,7 @@ class opportunity(db.Model):
     description = db.Column(db.Text)
     paying = db.Column(db.Boolean, default=False) 
     location =  db.Column(db.Integer, db.ForeignKey('locations.id'))
+    # organisation = 
 
     def __repr__(self):
         return '<Student: {}>'.format(self.opp_type)

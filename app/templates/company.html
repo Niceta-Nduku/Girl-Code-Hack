@@ -20,7 +20,7 @@
               padding-right: 6%;
               padding-top: 3%;
         background-color: #CDECF3;">
-          <div style="position: fixed; left: 15%; width: 50%; height: 45%;" >
+          <div style="position: fixed; left: 6%; width: 50%; height: 45%;" >
             <img src="{{url_for('static', filename='Company.png')}}" align="centre" style="width:500px;height:500px;" />
           </div>
         </div>
@@ -50,16 +50,19 @@
               <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
                 <div class="container" style="width: 100%; padding: 5% 5%;">
 
-                  <form action="{{ url_for('signup') }}" method="POST">
+                  <form action="{{ url_for('compHome') }}" method="POST">
                     <div class="form-group">
+                      <!-- <label for="name">Name</label>-->
                       <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>              
 
                     <div class="form-group">
+                     <!--  <label for="email">Contact</label>-->
                       <input type="text" class="form-control" name="website" placeholder="Website">
                     </div>
 
                     <div class="form-group">
+                     <!--  <label for="Interests">Interests</label>-->
                       <input type="text" class="form-control" name="field" placeholder="Field">
                     </div>
 
@@ -71,15 +74,8 @@
                     </div>
 
                     <div class="form-group">
+                      <!-- <label for="Sub_Deg">Sub_Deg</label>-->
                       <input type="text" class="form-control" name="email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="location" placeholder="Location">
-                    </div>
-
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="password" placeholder="Password">
                     </div>
 
                     <div class="d-flex justify-content-center">

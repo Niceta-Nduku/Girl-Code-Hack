@@ -1,5 +1,6 @@
 # third-party imports
 from flask import Flask
+from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -26,6 +27,12 @@ def create_app(config_name):
     migrate = Migrate(app, db)
 
     from app import models
+
+    from .home import home as home_blueprint
+    app.register_blueprint(home_blueprint, url_prefix='/')
+
+    from .opportunities import opportunity as opportunity_blueprint
+    app.register_blueprint(opportunity_blueprint, url_prefix='/opportunities')
 
     from .institution import institution as institution_blueprint
     app.register_blueprint(institution_blueprint, url_prefix='/institution')
