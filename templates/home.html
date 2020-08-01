@@ -1,0 +1,86 @@
+<html>
+  <head>
+      <title>nextstep</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}" >
+      
+        <div style="width: 45%; height: 50%; text-align: center;">
+          
+    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
+        </div>
+
+        <div style="position: fixed;
+        bottom: 2.5%;
+             left: 2%;
+             width: 50%;
+              height: 55%;
+              padding-right: 6%;
+              padding-top: 3%;
+        background-color: #CDECF3;">
+          
+          <div style="position: fixed;
+               bottom: 50%;
+               left: 5%;
+              width: 35%;
+   
+               background-color: #F2F2F2;text-align: center;
+               font-size:xx-large;">
+                ARTICLES
+            </div>
+            <div style="position: fixed;
+              bottom: 26.5%;
+              left: 12%;
+              width: 20%;
+              "
+              >
+               <img src="{{url_for('static', filename='article 1.png')}}" align="centre" style="width:200px;height:200px;" /> 
+            </div>
+
+            <div style="position: fixed;
+              bottom: 25.5%;
+              left: 23%;
+              width:11.5%;height:23%;
+              background-color: white ;
+              border-radius: 30%; border-style: solid; border-color: white;padding-top: 4%;"
+              >
+              <div style="text-align: center;">
+                <a href="https://www.indeed.com/career-advice/interviewing/how-to-prepare-for-an-interview" style="color: black; font-size: large;">How to prepare for an interview</a>
+              </div>
+            </div>
+
+            <div style="position: fixed;
+              bottom: 3%;
+              left: 12%;
+              width:11.5%;height:23%;
+              background-color: white ;
+              border-radius: 30%; border-style: solid; border-color: white;padding-top: 4%;"
+              >
+              <div style="text-align: center;">
+                <a href="https://www.topuniversities.com/student-info/health-and-support/exam-preparation-ten-study-tips" style="color: black; font-size: large;">Exam Preparation:Ten Study Tips</a>
+              </div>
+            </div>
+
+            <div style="position: fixed;
+              bottom: 3%;
+              left: 23.5%;
+              width: 20%;
+              "
+              >
+               <img src="{{url_for('static', filename='article2.png')}}" align="centre" style="width:210px;height:210px;" /> 
+            </div>
+        </div>
+
+        <div style="position: fixed;
+        bottom: 2%;
+        right: 3%;
+        width: 50%;
+        height: 95%;
+        background-color: #f2f2f2;">
+          grey div
+        </div>
+      </body>
+
+</html>
