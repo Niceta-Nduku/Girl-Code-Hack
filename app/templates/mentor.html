@@ -20,7 +20,7 @@
               padding-right: 6%;
               padding-top: 3%;
         background-color: #CDECF3;">
-          <div style="position: fixed; left: 6%; width: 50%; height: 45%;" >
+          <div style="position: fixed; left: 15%; width: 50%; height: 45%;" >
            <img src="{{url_for('static', filename='Mentor.png')}}" align="centre" style="width:500px;height:500px;" />
         </div>
         </div>
@@ -52,40 +52,42 @@
 
                   <form action="{{ url_for('signup') }}" method="POST">
                     <div class="form-group">
-                      <!-- <label for="name">Name</label>-->
                       <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>              
 
                     <div class="form-group">
-                      <!-- <label for="surname">Surname</label>-->
                       <input type="text" class="form-control" name="surname" placeholder="Surname">
                     </div>
 
                     <div class="form-group">
-                      <!-- <label for="surname">Surname</label>-->
                       <input type="text" class="form-control" name="company" placeholder="Company">
                     </div>
 
 
                     <div class="form-group">
-                     <!--  <label for="email">Contact</label>-->
                       <input type="text" class="form-control" name="contact" placeholder="E-mail">
                     </div>
 
                     <div class="form-group">
-                     <!--  <label for="email">Contact</label>-->
                       <input type="text" class="form-control" name="website" placeholder="Website">
                     </div>
 
                     <div class="form-group">
-                     <!--  <label for="Interests">Interests</label>-->
                       <input type="text" class="form-control" name="interests" placeholder="Interests">
                     </div>
 
                     <div class="form-group">
-                      <!-- <label for="Sub_Deg">Sub_Deg</label>-->
+                      <input type="text" class="form-control" name="location" placeholder="Location">
+                    </div>
+
+                    <div class="form-group">
                       <input type="text" class="form-control" name="linkedIn" placeholder="LinkedIn">
                     </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="password" placeholder="Password">
+                    </div>
+
 
                     <div class="d-flex justify-content-center">
 
