@@ -7,10 +7,26 @@
     </head>
     <body background="{{ url_for('static', filename='background.jpg') }}" >
       
-        <div style="width: 45%; height: 50%; text-align: center;">
-          
-    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
-        </div>
+      <header style="height: 50px; background-color: black;">
+        <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+      <div style="position: fixed; 
+      right:1%;
+      top: 0.5%;
+      text-align: right; 
+      
+      font-weight: 100; 
+      font-size: xx-large;
+      width: 30%;">
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">Contact us |</a>
+      <a href="{{url_for('signup')}}" style="color: white;">Log out</a>
+    </div>  
+      
+    </header>
+          <div style="width: 48%; height: 50%; text-align: center;">
+            
+      <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
+          </div>
 
         <div style="position: fixed;
          bottom: 2.5%;
@@ -22,7 +38,7 @@
         background-color: #CDECF3;">
           
           <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
-            <div class="container" style="width: 100%; padding: 10% 5%;">
+            <div class="container" style="width: 100%; padding: 5% 5%;">
 
                 <div class="form-group">
                     <label for="Category">Opportunity Type </label>
@@ -57,7 +73,7 @@
                  
                   <div class="d-flex justify-content-center">
 
-                    <button type="submit" class="btn btn-info" style="margin-top: 2%;">Register Business</button>
+                    <button type="submit" class="btn btn-info" style="margin-top: 2%; background-color: black;">Submit</button>
                   </div>
 
 
@@ -70,9 +86,8 @@
         bottom: 2%;
         right: 3%;
         width: 50%;
-        height: 95%;
+        height: 90%;
         background-color: #f2f2f2;">
-          
           <div style="position: fixed;
           top: 10%;
           right: 7%;
@@ -80,11 +95,21 @@
           height: 5%;
           background-color: #FF7994;text-align: center;
           font-size:xx-large;">
-           CURRENT OPPORTUNITIES
+           WELCOME COMPANY
+          </div>
+
+          <div style="position: fixed;
+          top: 16%;
+          right: 7%;
+         width: 40%;
+          height: 5%;
+          background-color: #FF7994;text-align: center;
+          font-size:xx-large;">
+           CURRENT OPPORTUNITIES FROM YOU
           </div>
 
         <div style="position: fixed;
-        top: 20%;
+        top: 23%;
         right: 11%;
        width: 30%;
         height: 25%;

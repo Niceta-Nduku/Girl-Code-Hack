@@ -7,10 +7,24 @@
            
           </head>
           <body background="{{ url_for('static', filename='background.jpg') }}" >
-            
+            <header style="height: 50px; background-color: black;">
+            <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+          <div style="position: fixed; 
+          right:1%;
+          top: 0.5%;
+          text-align: right; 
+          
+          font-weight: 100; 
+          font-size: xx-large;
+          width: 20%;">
+          <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+          <a href="{{url_for('signup')}}" style="color: white;">Contact us</a>
+        </div>  
+          
+        </header>
               <div style="width: 48%; height: 50%; text-align: center;">
                 
-          <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
+          <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
               </div>
 
               <div style="position: fixed;
@@ -30,7 +44,7 @@
                         <input type="text" class="form-control" name="email" placeholder="Enter Email Address">
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
                       </div>           
                       <div style="text-align: right;">
                       <a href="{{url_for('signup')}}">Forgot password?</a>
@@ -51,11 +65,11 @@
               bottom: 2%;
               right: 3%;
               width: 50%;
-              height: 95%;
+              height: 90%;
               background-color: #f2f2f2;
               text-align: center;">
                <div style="position: fixed;
-               top: 5%;
+               top: 10%;
                right: 7%;
               width: 40%;
                height: 5%;
@@ -63,7 +77,18 @@
                font-size:xx-large;">
                 YOUR FUTURE AWAITS
                </div>
-          
+               <div style="position: fixed;
+               top: 22%;
+               right: 3%;
+               width: 50%;
+               height: 30%;
+               background-color: #f2f2f2;
+               text-align: center;">
+               <h3>Welcome to nextstep!</h3>
+              </br>
+            </br>
+              <h4>Join us to find your next bursary, internship or future career...</h4>
+               </div>
               <div style="position: fixed;
               bottom: 5%;
               right: 3%;

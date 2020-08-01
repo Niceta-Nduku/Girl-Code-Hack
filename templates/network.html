@@ -1,0 +1,96 @@
+<html>
+  <head>
+      <title>nextstep</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}" >
+      <header style="height: 50px; background-color: black;">
+        <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+      <div style="position: fixed; 
+      right:1%;
+      top: 0.5%;
+      text-align: right; 
+      
+      font-weight: 100; 
+      font-size: xx-large;
+      width: 30%;">
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">Contact us |</a>
+      <a href="{{url_for('signup')}}" style="color: white;">Log out</a>
+    </div>  
+      
+    </header>
+          <div style="width: 48%; height: 50%; text-align: center;">
+            
+      <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
+          </div>
+        <div style="position: fixed;
+              bottom: 2.5%;
+             left: 2%;
+             width: 50%;
+              height: 55%;
+              padding-right: 6%;
+              padding-top: 3%;
+        background-color: #CDECF3;">
+         <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
+            <div class="container" style="width: 100%; padding: 10% 5%;">
+
+              <form >
+                <div class="form-group">
+                  <input type="text" class="form-control" name="search" placeholder="Search for/Connect with friends">
+                  
+                    <button type="submit" class="btn btn-info" style="margin-top: 2%; background-color: black;">SEARCH</button>
+                  
+                </div>
+                <div class="form-group">
+                    
+                  <label style="font-size: large;padding-right: 1%;">Ryan Reynolds</label> 
+                  <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">ADD</button>
+                  
+                </div>           
+                <div class="form-group">
+                    
+                    <label style="font-size: large;padding-right: 1%;">Chrissy Teigan</label> 
+                    <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">ADD</button>
+                    
+                  </div>  
+              </form>
+
+              </div>
+              </div>
+        </div>
+
+        <div style="position: fixed;
+        bottom: 2%;
+        right: 3%;
+        width: 50%;
+        height: 90%;
+        background-color: #f2f2f2;">
+          <h1 style="text-align: center;padding-top: 4%;">Enjoy Networking</h1>
+          <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
+            <div class="container" style="width: 100%; padding: 10% 5%;">
+
+              <form>
+                  <h2>Friends</h2>
+                <div class="form-group">
+                    
+                  <label style="font-size: large;padding-right: 1%;">Ryan Reynolds</label> 
+                  <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Send Message</button>
+                  
+                </div>           
+                <div class="form-group">
+                    
+                    <label style="font-size: large;padding-right: 1%;">Chrissy Teigan</label> 
+                    <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Send Message</button>
+                    
+                  </div>  
+              </form>
+
+              </div>
+              </div> 
+        </div>
+      </body>
+
+</html>

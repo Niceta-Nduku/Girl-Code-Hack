@@ -7,10 +7,25 @@
     </head>
     <body background="{{ url_for('static', filename='background.jpg') }}" >
       
-        <div style="width: 45%; height: 50%; text-align: center;">
-          
-    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
-        </div>
+      <header style="height: 50px; background-color: black;">
+        <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+      <div style="position: fixed; 
+      right:1%;
+      top: 0.5%;
+      text-align: right; 
+      
+      font-weight: 100; 
+      font-size: xx-large;
+      width: 20%;">
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+      <a href="{{url_for('signup')}}" style="color: white;">Contact us</a>
+    </div>  
+      
+    </header>
+          <div style="width: 48%; height: 50%; text-align: center;">
+            
+      <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
+          </div>
 
         <div style="position: fixed;
               bottom: 2.5%;
@@ -20,8 +35,8 @@
               padding-right: 6%;
               padding-top: 3%;
         background-color: #CDECF3;">
-          <div style="position: fixed; left: 6%; width: 50%; height: 45%;" >
-            <img src="{{url_for('static', filename='Company.png')}}" align="centre" style="width:500px;height:500px;" />
+          <div style="position: fixed; left: 15%; width: 50%; height: 45%;" >
+            <img src="{{url_for('static', filename='Company.png')}}" align="centre" style="width:400px;height:400px;" />
           </div>
         </div>
 
@@ -29,17 +44,17 @@
         bottom: 2%;
         right: 3%;
         width: 50%;
-        height: 95%;
+        height: 90%;
         background-color: #f2f2f2;">
            <div style="position: fixed;
               bottom: 2%;
               right: 3%;
               width: 50%;
-              height: 95%;
+              height: 90%;
               background-color: #f2f2f2;
               text-align: center;">
                <div style="position: fixed;
-               top: 5%;
+               top: 10%;
                right: 7%;
               width: 40%;
                height: 5%;
@@ -50,20 +65,13 @@
               <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
                 <div class="container" style="width: 100%; padding: 5% 5%;">
 
-                  <form action="{{ url_for('compHome') }}" method="POST">
+                  <form action="{{ url_for('signup') }}" method="POST">
                     <div class="form-group">
-                      <!-- <label for="name">Name</label>-->
                       <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>              
 
                     <div class="form-group">
-                     <!--  <label for="email">Contact</label>-->
                       <input type="text" class="form-control" name="website" placeholder="Website">
-                    </div>
-
-                    <div class="form-group">
-                     <!--  <label for="Interests">Interests</label>-->
-                      <input type="text" class="form-control" name="field" placeholder="Field">
                     </div>
 
                     <div class="form-group">
@@ -74,8 +82,30 @@
                     </div>
 
                     <div class="form-group">
-                      <!-- <label for="Sub_Deg">Sub_Deg</label>-->
                       <input type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="location" placeholder="Location">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="password" placeholder="Password">
+                    </div>
+
+                                     </div>
+                    <div class="form-group">
+                      <label for="Field">Field: </label>
+                      <select class="form-group col-3" name="tag">
+                        <option type="checkbox" id="tag1" name="tag1">
+                        <label for="tag1"> Science</label>
+                        <option type="checkbox" id="tag2" name="tag2">
+                        <label for="tag2"> Mathematics</label>
+                        <option type="checkbox" id="tag3" name="tag3">
+                        <label for="tag3"> Economics</label>
+                        <option type="checkbox" id="tag4" name="tag4">
+                        <label for="tag4"> Physics</label>
+                      </select>
                     </div>
 
                     <div class="d-flex justify-content-center">
