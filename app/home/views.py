@@ -3,7 +3,6 @@ from flask_login import login_required
 
 from . import home
 from ..models import Student, Professional, organisation, Interests, locations
-from .forms import StudentRegistrationForm
 
 @home.route ('/')
 def homepage():
@@ -18,7 +17,9 @@ def register():
 
 @home.route('/login',methods=['GET', 'POST'])
 def login():
-    return redirect('student.student_profile')
+    if request.method == "POST":
+        
+    return redirect(url_for('student.student_login'))
 
 @home.route('/register/student', methods=['GET', 'POST'])
 def student_register():
@@ -48,26 +49,25 @@ def student_register():
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():
-    return 'redirect(\'professional/dashboard\')'
+    return render_template('mentor.html')
 
 @home.route('/register/institution', methods=['GET', 'POST'])
 def institution_register():
-    return 'redirect(\'institution/dashboard\')'
+    return render_template('institution.html')
 
-@home.route('student/dashboard')
-@login_required
-def student_dashboard():
-    # return render_template('home/student.html')
-    return 'student homepage'
 
-@home.route('professional/dashboard')
+@home.route('student/home')
 @login_required
-def professional_dashboard():
-    # return render_template('home/professional.html')
-    return 'professional\'s home page'
+def student_home():
+    return render_template('home.html')
 
-@home.route('institution/dashboard')
+
+@home.route('professional/home')
 @login_required
-def institution_dashboard():
-    # return render_template('home/institution.html')
-    return 'institution\'s home page'
+def professional_home():
+    return render_template('MentorHome.html')
+
+@home.route('institution/home')
+@login_required
+def institution_home():
+    return render_template('institutionHome.html')

@@ -9,4 +9,8 @@ def student_profile(username):
 
     return 'this is a student profile'
 
+@student.route('/')
+def student_login(uername):
+    student = Student.query.filter_by(username=username).first()
 
+    return 'this is a student profile'
