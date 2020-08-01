@@ -1,4 +1,4 @@
-from flask import abort, render_template, redirect
+from flask import abort, render_template, redirect, request, url_for 
 from flask_login import login_required
 
 from . import home
@@ -10,26 +10,38 @@ def homepage():
     """
     Render the homepage template on the / route
     """
-    return render_template('home.html')
+    return render_template('signin.html')
 
 @home.route('/register')
 def register():
     return render_template('signup.html')
 
+@home.route('/login',methods=['GET', 'POST'])
+def login():
+    return render_template('home.html')
+
 @home.route('/register/student', methods=['GET', 'POST'])
 def student_register():
-    form = StudentRegistrationForm()
-    if form.validate_on_submit():
-        student = Student()
+    if request.method == "POST":     
+
+        student = Student(name = request.form.get("name"),
+                    surname = request.form.get("surname"),
+                    email = request.form.get("contact"),
+                    sugdeg = request.form.get("subdeg"),
+                    location = request.form.get("location"),
+                    password = request.form.get("password"),
+                    grade_year = request.form.get("password"),
+                    mentor = request.form.get("password"))
 
         db.session.add(student)
         db.session.commit()
 
-        #login
-        return redirect('student/dashboard')
+        print(student)
+
+        return redirect(request.url)
 
      # load student registration template
-    return render_template('student.html', form=form, title='Student Registration')
+    return render_template('student.html')
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():

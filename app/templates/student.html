@@ -20,8 +20,8 @@
               padding-right: 6%;
               padding-top: 3%;
         background-color: #CDECF3;">
-         <div style="position: fixed; left: 6%; width: 50%; height: 45%;" >
-           <img src="{{url_for('static', filename='student.png')}}" align="centre" style="width:500px;height:500px;" />
+         <div style="position: fixed; left: 15%; width: 50%; height: 45%;" >
+           <img src="{{url_for('static', filename='Student.png')}}" align="centre" style="width:500px;height:500px;" />
         </div>
         </div>
 
@@ -54,36 +54,41 @@
           <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
                 <div class="container" style="width: 100%; padding: 5% 5%;">
 
-                  <form action="{{ url_for('student') }}" method="POST">
+                  <form action="{{ url_for('home.student_register') }}" method="POST">
                     <div class="form-group">
-                      <!-- <label for="name">Name</label>-->
                       <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>              
 
                     <div class="form-group">
-                      <!-- <label for="surname">Surname</label>-->
                       <input type="text" class="form-control" name="surname" placeholder="Surname">
                     </div>
 
                     <div class="form-group">
-                     <!--  <label for="email">Contact</label>-->
                       <input type="text" class="form-control" name="contact" placeholder="E-mail">
                     </div>
 
-                    <div class="form-group">
-                     <!--  <label for="Interests">Interests</label>-->
+                    <!-- <div class="form-group">
                       <input type="text" class="form-control" name="interests" placeholder="Interests">
+                    </div> -->
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subdeg" placeholder="Subjects/Degree">
                     </div>
 
                     <div class="form-group">
-                      <!-- <label for="Sub_Deg">Sub_Deg</label>-->
-                      <input type="text" class="form-control" name="subdeg" placeholder="Subjects/Degree">
+                      <input type="text" class="form-control" name="location" placeholder="Location">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="password" placeholder="Password">
                     </div>
 
                   </div>
                     <div class="form-group">
                       <label for="Grade_Year">Grade/Year: </label>
-                      <select class="form-group col-3" name="tag">
+                      <select class="form-group 
+
+                      col-3" name="tag">
                         <option type="checkbox" id="tag1" name="tag1">
                         <label for="tag1"> Grade 10</label>
                         <option type="checkbox" id="tag2" name="tag2">
@@ -109,87 +114,6 @@
                         <label for="tag2"> No</label>
                       </select>
                     </div>
-
-                   <!--<div class="form-group">
-                      <label for="Grade_Year">Grade_Year</label>
-                      <input type="text" class="form-control" name="grade" placeholder="Grade/Year">
-                    </div> 
-
-
-
-                    </div>
-                    <div class="form-group">
-                      <label for="Mentor">Mentor Required: </label>
-                      <select class="form-group col-3" name="tag">
-                        <option type="checkbox" id="tag1" name="tag1">
-                        <label for="tag1"> Yes</label>
-                        <option type="checkbox" id="tag2" name="tag2">
-                        <label for="tag2"> No</label>
-                      </select>
-                    </div> -->
-
-
-
-<!--                    </div>
-                    <div class="form-group">
-                      <label for="Grade_Year">Grade/Year: </label>
-                      <br>
-                      <select class="form-group col-3" name="tag">
-                        <option type="checkbox" id="tag1" name="tag1">
-                        <label for="tag1"> Grade 10</label>
-                        <option type="checkbox" id="tag2" name="tag2">
-                        <label for="tag2"> Grade 11</label>
-                        <option type="checkbox" id="tag3" name="tag3">
-                        <label for="tag3"> Grade 10</label>
-                        <option type="checkbox" id="tag4" name="tag4">
-                        <label for="tag4"> 1st Year</label>
-                        <option type="checkbox" id="tag4" name="tag4">
-                        <label for="tag4"> 2nd Year</label>
-                        <option type="checkbox" id="tag4" name="tag4">
-                        <label for="tag4"> 3rd Year</label>
-                        <option type="checkbox" id="tag4" name="tag4">
-                        <label for="tag4"> 4th Year</label>
-                      </select>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="email">Contact</label>
-                      <input type="text" class="form-control" name="contact" placeholder="Enter e-mail address or website">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="logo">Logo</label>
-                      <input type="text" class="form-control" name="logo" placeholder="URL for your company logo">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="loc">Address</label>
-                      <input type="text" class="form-control" name="loc" placeholder="Where is your company base?">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Category">About: </label>
-                        <br>
-                        <textarea class="container" name="about" rows="3" cols="30">
-                    </textarea>
-                  </div>
-                    <div class="form-group">
-                      <label for="Category">Category: </label>
-                      <br>
-                      <select class="form-group col-3" name="tag">
-                        <option type="checkbox" id="tag1" name="tag1">
-                        <label for="tag1"> Retail</label>
-                        <option type="checkbox" id="tag2" name="tag2">
-                        <label for="tag2"> Services</label>
-                        <option type="checkbox" id="tag3" name="tag3">
-                        <label for="tag3"> Restaurant</label>
-                        <option type="checkbox" id="tag4" name="tag4">
-                        <label for="tag4"> Other</label>
-                      </select>
-                    </div>
--->
-      
-
 
                     <div class="d-flex justify-content-center">
 

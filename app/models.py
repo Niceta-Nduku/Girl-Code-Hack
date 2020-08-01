@@ -15,7 +15,7 @@ class Student(UserMixin,db.Model):
     name = db.Column(db.String(60),index=True,nullable=False)
     username = db.Column(db.String(60),index=True, unique=True,nullable=False) 
     level = db.Column(db.String(60), db.ForeignKey('student_level.level_id'),nullable=False) #has only one level
-    interests = db.relationship('Interest', backref='student', lazy=True) #more than one intererst
+    # interests = db.relationship('Interest', backref='student', lazy=True) #more than one intererst
     mentorship = db.Column(db.Boolean, default=False) #wants a mentor or not
     mentor = db.Column(db.Integer, db.ForeignKey('professionals.id'))
     mentor_type = db.Column(db.Integer, db.ForeignKey('profession_type.id'))
