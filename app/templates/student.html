@@ -54,7 +54,7 @@
           <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
                 <div class="container" style="width: 100%; padding: 5% 5%;">
 
-                  <form action="{{ url_for('signup') }}" method="POST">
+                  <form action="{{ url_for('home.student_register') }}" method="POST">
                     <div class="form-group">
                       <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>              
@@ -78,7 +78,9 @@
                   </div>
                     <div class="form-group">
                       <label for="Grade_Year">Grade/Year: </label>
-                      <select class="form-group col-3" name="tag">
+                      <select class="form-group 
+
+                      col-3" name="tag">
                         <option type="checkbox" id="tag1" name="tag1">
                         <label for="tag1"> Grade 10</label>
                         <option type="checkbox" id="tag2" name="tag2">
