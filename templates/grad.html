@@ -1,0 +1,36 @@
+<html>
+  <head>
+      <title>nextstep</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}" >
+      
+        <div style="width: 45%; height: 50%; text-align: center;">
+          
+    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
+        </div>
+
+        <div style="position: fixed;
+         bottom: 2.5%;
+             left: 2%;
+             width: 50%;
+              height: 55%;
+              padding-right: 6%;
+              padding-top: 3%;
+        background-color: #CDECF3;">
+          This is the blue div
+        </div>
+
+        <div style="position: fixed;
+        bottom: 2%;
+        right: 3%;
+        width: 50%;
+        height: 95%;
+        background-color: #f2f2f2;">
+          This is the grey div
+        </div>
+      </body>
+
+</html>
