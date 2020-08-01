@@ -1,0 +1,103 @@
+<html>
+  <head>
+      <title>nextstep</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}" >
+      
+        <div style="width: 45%; height: 50%; text-align: center;">
+          
+    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
+        </div>
+
+        <div style="position: fixed;
+         bottom: 2.5%;
+             left: 2%;
+             width: 50%;
+              height: 55%;
+              padding-right: 6%;
+              
+        background-color: #CDECF3;">
+          <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
+            <div class="container" style="width: 100%; padding: 2% 2%;">
+
+          <div class="form-group">
+            <label for="email">Contact</label>
+            <input type="text" class="form-control" name="contact" placeholder="Enter e-mail address or website">
+          </div>
+          <div class="form-group">
+            <label for="Category">Opportunity Description: </label>
+            <br>
+            <textarea class="container" name="about" rows="2" cols="30">
+        </textarea>
+      </div>
+         
+          <div class="form-group">
+            <label for="loc">Location</label>
+            <input type="text" class="form-control" name="loc" placeholder="Where is your institution based?">
+          </div>
+
+         
+          <div class="d-flex justify-content-center">
+
+            <button type="submit" class="btn btn-info" style="margin-top: 2%; background-color: black;">Submit</button>
+          </div>
+        </div>
+    </div>
+        </div>
+        <div style="position: fixed;
+        bottom: 2%;
+        right: 3%;
+        width: 50%;
+        height: 95%;
+        background-color: #f2f2f2;">
+          <div style="position: fixed;
+          top: 8%;
+          right: 7%;
+         width: 40%;
+          height: 5%;
+          background-color: #FF7994;text-align: center;
+          font-size:xx-large;">
+           WELCOME ACADEMIC INSTITUTION
+          </div>
+
+          <div style="position: fixed;
+          top: 15%;
+          right: 7%;
+         width: 40%;
+          height: 5%;
+          background-color: #FF7994;text-align: center;
+          font-size:xx-large;">
+           CURRENT OPPORTUNITIES FROM YOU
+          </div>
+
+        <div style="position: fixed;
+        top: 23%;
+        right: 11%;
+       width: 30%;
+        height: 25%;
+        text-align: center;
+        border-style: solid;
+        border-color: black;
+        border-radius: 10%">
+        
+        </div>
+
+        <div style="position: fixed;
+        top: 50%;
+        right: 11%;
+        width: 30%;
+        height: 25%;
+        text-align: center;
+        border-style: solid;
+        border-color: black;
+        border-radius: 10%">
+        
+        </div>
+          
+        </div>
+      </body>
+
+</html>
