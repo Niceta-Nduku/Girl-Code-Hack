@@ -45,7 +45,7 @@ class Student(UserMixin,db.Model):
     def __repr__(self):
         return '<Student: {}>'.format(self.username)
 
-class professional(UserMixin,db.Model):
+class Professional(UserMixin,db.Model):
 
     __tablename__ = 'professionals'
 
@@ -88,7 +88,7 @@ class professional(UserMixin,db.Model):
     def __repr__(self):
         return '<Professional: {}>'.format(self.username)
 
-class interersts(db.Model):
+class Interersts(db.Model):
 
     __tablename__ = "Interests"
 
@@ -162,7 +162,7 @@ class locations(db.Model):
     def __repr__(self):
         return '<Student: {}>'.format(self.city)
 
-class levels(db.Model):
+class Levels(db.Model):
 
     __tablename__ = 'student_level'
 
@@ -172,7 +172,7 @@ class levels(db.Model):
     def __repr__(self):
         return '<student_level: {}>'.format(self.description)
 
-class profession_type(db.Model):
+class Profession_type(db.Model):
 
     __tablename__= 'profession_type'
 
