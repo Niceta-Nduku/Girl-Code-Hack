@@ -7,10 +7,24 @@
            
           </head>
           <body background="{{ url_for('static', filename='background.jpg') }}" >
-            
+            <header style="height: 50px; background-color: black;">
+            <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+          <div style="position: fixed; 
+          right:1%;
+          top: 0.5%;
+          text-align: right; 
+          
+          font-weight: 100; 
+          font-size: xx-large;
+          width: 20%;">
+          <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+          <a href="{{url_for('signup')}}" style="color: white;">Contact us</a>
+        </div>  
+          
+        </header>
               <div style="width: 48%; height: 50%; text-align: center;">
                 
-          <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
+          <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
               </div>
 
               <div style="position: fixed;
@@ -25,26 +39,22 @@
                 <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
                   <div class="container" style="width: 100%; padding: 10% 5%;">
       
-<<<<<<< HEAD
-                    <form action="{{ url_for('home.login') }}" method="POST">
-=======
                     <form action="{{ url_for('home') }}" method="POST">
->>>>>>> e64d71a5da5ea1b73c3c77b5782d165f15a602e5
                       <div class="form-group">
                         <input type="text" class="form-control" name="email" placeholder="Enter Email Address">
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
                       </div>           
                       <div style="text-align: right;">
-                      <a href="{{url_for('home.register')}}">Forgot password?</a>
+                      <a href="{{url_for('signup')}}">Forgot password?</a>
                     </div>
                       <div class="d-flex justify-content-center">
       
                         <button type="submit" class="btn btn-info" style="margin-top: 2%; background-color: black;">SIGN IN</button>
                       </div>
                     </br>
-                      <p>Don't have an account? <a href="{{url_for('home.register')}}">SIGN UP</a></p>
+                      <p>Don't have an account? <a href="{{url_for('signup')}}">SIGN UP</a></p>
                     </form>
       
                     </div>
@@ -55,11 +65,11 @@
               bottom: 2%;
               right: 3%;
               width: 50%;
-              height: 95%;
+              height: 90%;
               background-color: #f2f2f2;
               text-align: center;">
                <div style="position: fixed;
-               top: 5%;
+               top: 10%;
                right: 7%;
               width: 40%;
                height: 5%;

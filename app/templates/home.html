@@ -7,10 +7,26 @@
     </head>
     <body background="{{ url_for('static', filename='background.jpg') }}" >
       
-        <div style="width: 45%; height: 50%; text-align: center;">
-          
-    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:400px;height:400px;" /> 
-        </div>
+      <header style="height: 50px; background-color: black;">
+        <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+      <div style="position: fixed; 
+      right:1%;
+      top: 0.5%;
+      text-align: right; 
+      
+      font-weight: 100; 
+      font-size: xx-large;
+      width: 30%;">
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">About |</a>
+      <a href="{{url_for('signup')}}" style="color: white; padding-right: 2%;">Contact us |</a>
+      <a href="{{url_for('signup')}}" style="color: white;">Log out</a>
+    </div>  
+      
+    </header>
+          <div style="width: 48%; height: 50%; text-align: center;">
+            
+      <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
+          </div>
 
         <div style="position: fixed;
         bottom: 2.5%;
@@ -77,21 +93,9 @@
         bottom: 2%;
         right: 3%;
         width: 50%;
-        height: 95%;
+        height: 90%;
         background-color: #f2f2f2;">
-<<<<<<< HEAD
-          
-=======
-        <div style="position: fixed; top: 5%;
-        right: 6%;
-       width: 10%;
-        height: 5%; 
-        border-style: solid;
-        border-color: grey;
-        background-color: #a79ea0;text-align: center;
-        font-size:xx-large;" >
-        Button for log out
-      </div>
+        
           <div style="position: fixed; top: 15%;
           right: 23%;
          width: 10%;
@@ -101,7 +105,6 @@
           border-color: grey;
           background-color: #a79ea0;text-align: center;
           font-size:xx-large;" ></div>
->>>>>>> e64d71a5da5ea1b73c3c77b5782d165f15a602e5
           <div style="position: fixed;
           top: 40%;
           right: 7%;
@@ -117,24 +120,6 @@
               right: 3%;
               width: 50%;">
           <div class="d-flex justify-content-center">
-<<<<<<< HEAD
-              <button type="submit" class="btn btn-info" style="margin-top: 2%;background-color: black; width: 35%;font-size: x-large;"><a href="{{url_for('opportunity.internships')}}" style="color: white;">Internships</a></button>
-          </div>
-          <div class="d-flex justify-content-center">
-    
-            <button type="submit" class="btn btn-info" style="margin-top: 2%;background-color: black; width: 35%;font-size: x-large;"><a href="{{url_for('opportunity.bursary')}}" style="color: white;">Bursaries</a></button>
-          </div>
-          <div class="d-flex justify-content-center">
-    
-            <button type="submit" class="btn btn-info" style="margin-top: 2%;background-color: black; width: 35%;font-size: x-large;"><a href="{{url_for('opportunity.grad')}}" style="color: white;">Graduate Programs</a></button>
-          </div>
-          <div class="d-flex justify-content-center">
-    
-            <button type="submit" class="btn btn-info" style="margin-top: 2%;background-color: black; width: 35%;font-size: x-large;"><a href="{{url_for('opportunity.shadowing')}}" style="color: white;">Job Shadowing</a></button>
-          </div>
-          </div>
-        </div>
-=======
               <button type="submit" class="btn btn-info" style="margin-top: 2%;background-color: black; width: 35%;font-size: x-large;"><a href="{{url_for('internship')}}" style="color: white;">Internships</a></button>
           </div>
           <div class="d-flex justify-content-center">
@@ -160,7 +145,6 @@
           </div>
         </div>
         </div>
->>>>>>> e64d71a5da5ea1b73c3c77b5782d165f15a602e5
       </body>
 
 </html>
