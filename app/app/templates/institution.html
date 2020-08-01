@@ -20,7 +20,9 @@
               padding-right: 6%;
               padding-top: 3%;
         background-color: #CDECF3;">
-          This is the blue div
+          <div style="position: fixed; left: 6%; width: 50%; height: 45%;" >
+            <img src="{{url_for('static', filename='Institution.png')}}" align="centre" style="width:500px;height:500px;" />
+          </div>
         </div>
 
         <div style="position: fixed;
@@ -29,7 +31,48 @@
         width: 50%;
         height: 95%;
         background-color: #f2f2f2;">
-          This is the grey div
+           <div style="position: fixed;
+              bottom: 2%;
+              right: 3%;
+              width: 50%;
+              height: 95%;
+              background-color: #f2f2f2;
+              text-align: center;">
+               <div style="position: fixed;
+               top: 5%;
+               right: 7%;
+              width: 40%;
+               height: 5%;
+               background-color: #FF7994;text-align: center;
+               font-size:xx-large;">
+                INSTITUTION SIGN-UP
+               </div>
+              <div class="container" style=" width: 80%; padding: 2em; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 10%;">
+                <div class="container" style="width: 100%; padding: 5% 5%;">
+
+                  <form action="{{ url_for('business') }}" method="POST">
+                    <div class="form-group">
+                      <!-- <label for="name">Name</label>-->
+                      <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>              
+
+                    <div class="form-group">
+                     <!--  <label for="email">Contact</label>-->
+                      <input type="text" class="form-control" name="website" placeholder="Website">
+                    </div>
+
+                    <div class="form-group">
+                      <!-- <label for="Sub_Deg">Sub_Deg</label>-->
+                      <input type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+
+                      <button type="submit" class="btn btn-info" style="margin-top: 2%;">SIGN UP</button>
+                    </div>
+
+                  </form>
+                </div>
         </div>
       </body>
 
