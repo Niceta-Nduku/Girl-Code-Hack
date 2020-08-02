@@ -13,7 +13,7 @@ class Student(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), index=True, unique=True)
     name = db.Column(db.String(60),index=True,nullable=False)
-    surname = db.Column(db.String(60),index=True, unique=True,nullable=False) 
+    username = db.Column(db.String(60),index=True, unique=True,nullable=False) 
     level = db.Column(db.String(60), nullable=False) #has only one level
     mentorship = db.Column(db.Boolean, default=False) #wants a mentor or not
     interests = db.relationship("Interests", backref = "student", lazy="dynamic", viewonly=False, order_by = "Interests.id")

@@ -37,10 +37,9 @@ def student_register():
         # input_interest = Interests.query.filter_by(description=request.form.get("interests")).one()
         interest_in_mentor = request.form.get("Mentor")
         student = Student(name = request.form.get("name"),
-                    surname = request.form.get("surname"),
+                    username = request.form.get("surname"),
                     # interests = input_interest,
-                    email = request.form.get("contact"),    
-                    location = request.form.get("location"),
+                    email = request.form.get("contact"),   
                     password = request.form.get("password"),
                     level = request.form.get("password"),
                     mentorship = True if interest_in_mentor == 'Yes' else False)
@@ -57,6 +56,7 @@ def student_register():
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():
+    
     return render_template('mentor.html')
 
 @home.route('/register/institution', methods=['GET', 'POST'])
