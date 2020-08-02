@@ -56,12 +56,17 @@ def student_register():
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():
+    if request.method == "POST":
     #todo: add progessional object to db 
+        return redirect(url_for('professional.professional_home'))
+
     return render_template('mentor.html')
 
 @home.route('/register/institution', methods=['GET', 'POST'])
 def institution_register():
-    #todo: add institution object to db
+    if request.method == "POST":
+        #todo: add institution object to db 
+        return redirect(url_for('institution.institution_home'))
     return render_template('institution.html')
 
 @home.route('/logout')
