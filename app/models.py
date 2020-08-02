@@ -13,13 +13,13 @@ class Student(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), index=True, unique=True)
     name = db.Column(db.String(60),index=True,nullable=False)
-    username = db.Column(db.String(60),index=True, unique=True,nullable=False) 
+    surname = db.Column(db.String(60),index=True, unique=True,nullable=False) 
     level = db.Column(db.String(60), nullable=False) #has only one level
     mentorship = db.Column(db.Boolean, default=False) #wants a mentor or not
-    interests = db.relationship("Interests", back_populates = "student", viewonly=False, order_by = "Interests.id")
-    # mentor = db.Column(db.Integer, db.ForeignKey('professionals.id'))
-    # mentor_type = db.Column(db.Integer, db.ForeignKey('profession_type.id'))
-    # location = db.Column(db.Integer, db.ForeignKey('locations.id'))
+    interests = db.relationship("Interests", backref = "student", lazy="dynamic", viewonly=False, order_by = "Interests.id")
+    mentor = db.Column(db.Integer, db.ForeignKey('professionals.id'))
+    mentor_type = db.Column(db.Integer, db.ForeignKey('profession_type.id'))
+    location = db.Column(db.Integer, db.ForeignKey('locations.id'))
     about = db.Column(db.Text)
 
     @property
@@ -65,6 +65,7 @@ class Professional(UserMixin,db.Model):
     company = db.Column(db.Integer, db.ForeignKey('organisations.id'))
     linkedIn = db.Column(db.String(120), index=True, unique=True)
     about = db.Column(db.Text)
+    interests = db.relationship("Interests", backref = "professional", viewonly=False, order_by = "Interests.id")
 
     @property
     def password(self):
@@ -90,7 +91,6 @@ class Professional(UserMixin,db.Model):
 
     def __repr__(self):
         return '<Professional: {}>'.format(self.username)
-Professional.interests = db.relationship("Interests", back_populates = "professional")
 
 class Interests(db.Model):
 
@@ -98,8 +98,8 @@ class Interests(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String(60), unique=True)
-    student = db.Column(db.Integer, db.ForeignKey('students.id'))
-    professional = db.Column(db.Integer, db.ForeignKey('professionals.id'))
+    student_id = db.Column(db.Integer, db.ForeignKey('students.id'))
+    professional_id = db.Column(db.Integer, db.ForeignKey('professionals.id'))
 
     def __repr__(self):
         return '<Interests: {}>'.format(self.id)
@@ -108,15 +108,14 @@ class organisation(UserMixin, db.Model):
 
     __tablename__ = 'organisations'
     
-
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80),nullable= False, unique=True)
     website = db.Column(db.String(120), index=True, unique=True)
     description = db.Column(db.Text)
     email = db.Column(db.String(120), index=True, unique=True)
-    opportunities = db.relationship('opportunites', backref='organisation', lazy=True)
+    opportunities = db.relationship('opportunity', backref='Organisation', lazy=True)
     location = db.Column(db.Integer, db.ForeignKey('locations.id'))
-    employees = db.relationship('employess', backref='organisation', lazy=True)
+    employees = db.relationship('Professional', backref='Organisation', lazy=True)
     
 
     @property
