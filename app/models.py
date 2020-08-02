@@ -49,8 +49,6 @@ class Student(UserMixin,db.Model):
 def load_user(user_id):
     return Student.query.get(int(user_id))
 
-
-
 class Professional(UserMixin,db.Model):
 
     __tablename__ = 'professionals'

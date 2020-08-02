@@ -56,16 +56,17 @@ def student_register():
 
 @home.route('/register/professional', methods=['GET', 'POST'])
 def professional_register():
-    
+    #todo: add progessional object to db 
     return render_template('mentor.html')
 
 @home.route('/register/institution', methods=['GET', 'POST'])
 def institution_register():
+    #todo: add institution object to db
     return render_template('institution.html')
 
 @home.route('/logout')
 @login_required
 def logout():
-
+    #add log out details
     logout_user()
     return redirect(url_for('home.login'))
