@@ -1,31 +1,31 @@
 <html>
   <head>
-      <title>nextstep</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-     
-    </head>
-    <body background="{{ url_for('static', filename='background.jpg') }}" >
-      <header style="height: 50px; background-color: black;">
-        <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
-      <div style="position: fixed; 
-      right:1%;
-      top: 0.5%;
-      text-align: right; 
-      
-      font-weight: 100; 
-      font-size: xx-large;
-      width: 30%;">
-      <a href="{{url_for('home.register')}}" style="color: white; padding-right: 2%;">About |</a>
-      <a href="{{url_for('home.register')}}" style="color: white; padding-right: 2%;">Contact us |</a>
-      <a href="{{url_for('home.register')}}" style="color: white;">Log out</a>
-    </div>  
-      
-    </header>
-          <div style="width: 48%; height: 50%; text-align: center;">
-            
-      <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
-          </div>
+    <title>nextstep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+  </head>
+  <body background="{{ url_for('static', filename='background.jpg') }}" >
+    <header style="height: 50px; background-color: black;">
+      <div style="text-align: right; color: white;font-weight: 100; font-size: xx-large;width: 50%;">NEXTSTEP</div>
+    <div style="position: fixed; 
+    right:1%;
+    top: 0.5%;
+    text-align: right; 
+    
+    font-weight: 100; 
+    font-size: xx-large;
+    width: 30%;">
+    <a href="{{url_for('home.register')}}" style="color: white; padding-right: 2%;">About |</a>
+    <a href="{{url_for('home.register')}}" style="color: white; padding-right: 2%;">Contact us |</a>
+    <a href="{{url_for('home.register')}}" style="color: white;">Log out</a>
+  </div>  
+    
+  </header>
+        <div style="width: 48%; height: 50%; text-align: center;">
+          
+    <img src="{{url_for('static', filename='Capture.PNG')}}" align="centre" style="width:350px;height:350px;bottom: 10%;" /> 
+        </div>
         <div style="position: fixed;
               bottom: 2.5%;
              left: 2%;
@@ -46,13 +46,13 @@
                 </div>
                 <div class="form-group">
                     
-                  <label style="font-size: large;padding-right: 1%;">Ryan Reynolds</label> 
+                  <label style="font-size: large;padding-right: 1%;">Kevin Hart</label> 
                   <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">ADD</button>
                   
                 </div>           
                 <div class="form-group">
                     
-                    <label style="font-size: large;padding-right: 1%;">Chrissy Teigan</label> 
+                    <label style="font-size: large;padding-right: 1%;">Tiffany Haddish</label> 
                     <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">ADD</button>
                     
                   </div>  
@@ -68,28 +68,75 @@
         width: 50%;
         height: 90%;
         background-color: #f2f2f2;">
-          <h1 style="text-align: center;padding-top: 4%;">Enjoy Networking</h1>
-          <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
-            <div class="container" style="width: 100%; padding: 10% 5%;">
+        <div style="position: fixed;
+        top: 10%;
+        right: 7%;
+        width: 40%;
+        height: 40%;
+        text-align: center;
+        border-style: solid;
+        border-color: black;
+        border-radius: 10%">
+        <h1 style="text-align: center;padding-top: 4%;">Enjoy Networking</h1>
+        <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
+          <div class="container" style="width: 100%; padding: 10% 5%;">
 
-              <form>
-                  <h2>Friends</h2>
-                <div class="form-group">
-                    
-                  <label style="font-size: large;padding-right: 1%;">Ryan Reynolds</label> 
+            <form>
+                <h2>Friends</h2>
+              <div class="form-group">
+                  
+                <label style="font-size: large;padding-right: 1%;">Ryan Reynolds</label> 
+                <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Send Message</button>
+                
+              </div>           
+              <div class="form-group">
+                  
+                  <label style="font-size: large;padding-right: 1%;">Chrissy Teigan</label> 
                   <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Send Message</button>
                   
-                </div>           
-                <div class="form-group">
-                    
-                    <label style="font-size: large;padding-right: 1%;">Chrissy Teigan</label> 
-                    <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Send Message</button>
-                    
-                  </div>  
-              </form>
+                </div>  
+            </form>
 
-              </div>
-              </div> 
+            </div>
+            </div>  </div>
+            <div style="position: fixed;
+            top: 55%;
+            right: 7%;
+            width: 40%;
+            height: 40%;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10%">
+             <h1 style="text-align: center;padding-top: 4%;">Pick a mentor</h1>
+             <div class="container" style=" width: 60%; padding-right: 5px; border-radius: 25px; border-width: thin; border-style: solid; margin-top: 2%;">
+               <div class="container" style="width: 100%; padding: 10% 5%;">
+     
+                 <form>
+                     
+                   <div class="form-group">
+                       
+                     <label style="font-size: large;padding-right: 1%;">Tom Holland, Physics field, IoT </label> 
+                     <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Select</button>
+                     
+                   </div>           
+                   <div class="form-group">
+                       
+                       <label style="font-size: large;padding-right: 1%;">Megan, Mathematics field, IoT</label> 
+                       <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Select</button>
+                       
+                     </div>  
+                     <div class="form-group">
+                       
+                      <label style="font-size: large;padding-right: 1%;">Cindy, Science field, IoT</label> 
+                      <button type="submit" class="btn btn-info" style="margin-top: 1%; background-color:green;">Select</button>
+                      
+                    </div> 
+                 </form>
+     
+                 </div>
+                 </div> 
+          </div>
         </div>
       </body>
 
