@@ -13,3 +13,7 @@ def student_profile(name):
 @student.route('/home')
 def student_home():
     return render_template('home.html')
+
+@student.route('/network')
+def network():
+    return render_template('network.html')
