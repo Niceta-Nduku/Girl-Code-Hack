@@ -9,7 +9,7 @@ db = SQLAlchemy(app)
 
 
 
-
+"""
 #just python algorith for a rough idea
 mentorlist = []
 pofessionalList = []
@@ -32,15 +32,23 @@ for professional in professionalList:
 		mentorlist.append(professional)
 #list of all mentors who matched
 return mentorlist
+"""
 
 
 
 
 #tried to include sqlalchemy commands here
+from sqlalchemy import and_
+mentorlist = []
 
-#every student interest is checked against all the professions by iteration
-for _ in student.interests:
-	records = session.query(professional).filterby(professional.interests = student.interests)
+#if student is looking for a mentor
+if student.mentorship :
+
+
+	#every student interest is checked against all the professions by iteration
+	for _ in student.interests:
+		records = session.query(professional).filterby(and_(professional.interests == student.interests,professional.location==student.location,professional.mentor==true,))
+		mentorlist.append(records)
 
 
 
